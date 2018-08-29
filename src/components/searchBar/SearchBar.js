@@ -2,9 +2,9 @@ import React from 'react';
 import './SearchBar.css';
 
 const sortByOptions = {
-  'Best Match': 'best_match',
-  'Highest Rated': 'rating',
-  'Most Reviewed': 'review_count'
+  'Best Match': 'best_match'
+  , 'Highest Rated': 'rating'
+  , 'Most Reviewed': 'review_count'
 }
 
 class SearchBar extends React.Component {
@@ -20,23 +20,23 @@ class SearchBar extends React.Component {
     	this.handleSearch = this.handleSearch.bind(this);
 	}
 
-	getSortByClass = (sortByOption) => {
-		return this.state.sortBy === sortByOption ? 'active' : "";
+	getSortByClass(sortByOption) {
+		return this.state.sortBy === sortByOption ? 'active' : '';
 	}
 
-	handleSortByChange = (sortByOption) => {
+	handleSortByChange(sortByOption) {
 		this.setState({
 			sortBy: sortByOption
 		})
 	}
 
-	handleTermChange = (event) => {
+	handleTermChange(event) {
 		this.setState({
 			term: event.target.value
 		})
 	}
 
-	handleLocationChange = (event) => {
+	handleLocationChange(event) {
 		this.setState({
 			location: event.target.value
 		})
@@ -58,7 +58,7 @@ class SearchBar extends React.Component {
 				>
 					{sortByOption}
 				</li>
-				);
+			);
 		});
 	}
 
