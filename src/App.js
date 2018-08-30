@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import BusinessList from './components/businessList/BusinessList.js';
 import SearchBar from './components/searchBar/SearchBar.js';
 import yelp from './util/Yelp.js';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props){
     super(props)
 
